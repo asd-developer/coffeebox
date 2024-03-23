@@ -1,5 +1,5 @@
 <template data-theme="coffee" class="font-unica">
-    <header class="container w-full p-2">
+    <header class="w-full p-2">
         <h1 class="font-unica text-xl font-bold text-center">COFFEEBOX</h1>
     </header>
 

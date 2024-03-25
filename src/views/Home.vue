@@ -9,6 +9,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import {addCoffeeName, getCoffeeNames} from '@/indexdb/indexdb'
 import Search from '@/components/search.vue'
 import CardGrid from '@/components/cardGrid.vue'
 

@@ -2,22 +2,25 @@
   "name": "greatespresso",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
+    "register-service-worker": "^1.7.2",
+    "uuid": "^9.0.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/cli-plugin-pwa": "~5.0.0",
     "autoprefixer": "^10.4.18",
     "daisyui": "^4.7.2",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.11"
-  }
+  },
+  "type": "module"
 }

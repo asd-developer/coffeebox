@@ -1,17 +1,9 @@
 <template>
-    <section class="grid grid-flow-row grid-cols-3 gap-4">
-      <BeanBagCard/>
-      <BeanBagCard/>
-      <BeanBagCard/>
-      <BeanBagCard/>
+  <section class="flex flex-wrap gap-5">
+    <BeanBagCard class="w-full sm:w-1/2 md:w-2/3 lg:w-2/5 xl:w-2/6 flex-gap-5" v-for="index in 10" :key="index" />
+  </section>
+</template>
 
-    </section>
-  </template>
-  
-  <script setup>
-  import BeanBagCard from '@/components/beanBagCard.vue'
-  </script>
-  
-  <style>
-  </style>
-  
+<script setup>
+import BeanBagCard from '@/components/beanBagCard.vue'
+</script>

@@ -10,7 +10,7 @@ export async function initIndexedDB() {
             let db = event.target.result;
 
             let coffeeNamesStore = db.createObjectStore("coffeeNames", { keyPath: "id", autoIncrement: true });
-            coffeeNamesStore.createIndex("name", "name", { unique: true }); // Optional index on coffee name
+            coffeeNamesStore.createIndex("name", "name", { unique: true });
         };
 
         request.onerror = function (event) {
@@ -75,17 +75,17 @@ export async function getCoffeeNames() {
         cursorRequest.onsuccess = function (event) {
             let cursor = event.target.result;
             if (cursor) {
-                coffeeNames.push(cursor.value); // Collect the coffee name
-                cursor.continue(); // Move to the next record
+                coffeeNames.push(cursor.value);
+                cursor.continue();
             } else {
                 console.log("Coffee names retrieved successfully:", coffeeNames);
-                resolve(coffeeNames); // Resolve the promise with coffee names
+                resolve(coffeeNames);
             }
         };
 
         cursorRequest.onerror = function (event) {
             console.log("Error retrieving coffee names:", event.target.errorCode);
-            reject(event.target.errorCode); // Reject the promise with error
+            reject(event.target.errorCode);
         };
 
         transaction.oncomplete = function (event) {
@@ -94,7 +94,7 @@ export async function getCoffeeNames() {
 
         transaction.onerror = function (event) {
             console.log("Transaction error: " + event.target.errorCode);
-            reject(event.target.errorCode); // Reject the promise with error
+            reject(event.target.errorCode);
         };
     });
 }

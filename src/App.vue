@@ -3,7 +3,7 @@
         <h1 class="font-unica text-xl font-bold text-center">COFFEEBOX</h1>
     </header>
 
-    <main class="w-full h-full p-2">
+    <main class="w-full h-full">
       <RouterView/>
     </main>
 

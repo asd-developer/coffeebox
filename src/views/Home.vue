@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-row w-full mb-5">
+  <section class="flex flex-row w-[90%] mx-auto mb-5">
     <Search />
   </section>
   <section class="flex flex-row w-full">
